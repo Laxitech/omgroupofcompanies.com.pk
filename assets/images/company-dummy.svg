@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="100%" height="100%" role="img" aria-label="Company Campus and Operations Center">
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EAF2FA"/>
+      <stop offset="60%" stop-color="#F4F7FB"/>
+      <stop offset="100%" stop-color="#E5EDF6"/>
+    </linearGradient>
+    <linearGradient id="glassFacade" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#01509D" stop-opacity="0.88"/>
+      <stop offset="45%" stop-color="#003D78" stop-opacity="0.94"/>
+      <stop offset="100%" stop-color="#022449" stop-opacity="0.98"/>
+    </linearGradient>
+    <linearGradient id="glassReflection" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.32"/>
+      <stop offset="30%" stop-color="#FFFFFF" stop-opacity="0.08"/>
+      <stop offset="70%" stop-color="#38BDF8" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="towerLeft" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0F2B48"/>
+      <stop offset="100%" stop-color="#1E3E60"/>
+    </linearGradient>
+    <linearGradient id="towerRight" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1A3B5C"/>
+      <stop offset="100%" stop-color="#0B2035"/>
+    </linearGradient>
+    <linearGradient id="groundGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#DCE4EC"/>
+      <stop offset="35%" stop-color="#CBD6E2"/>
+      <stop offset="100%" stop-color="#B8C6D4"/>
+    </linearGradient>
+    <linearGradient id="plazaGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E2E8F0"/>
+      <stop offset="50%" stop-color="#F1F5F9"/>
+      <stop offset="100%" stop-color="#CBD5E1"/>
+    </linearGradient>
+    <pattern id="gridWindows" width="28" height="20" patternUnits="userSpaceOnUse">
+      <rect width="24" height="16" x="2" y="2" fill="#E0F2FE" fill-opacity="0.18" rx="1"/>
+      <line x1="2" y1="10" x2="26" y2="10" stroke="#38BDF8" stroke-opacity="0.12" stroke-width="0.8"/>
+    </pattern>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#01509D" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+
+  <!-- Sky Background -->
+  <rect width="800" height="560" fill="url(#skyGrad)"/>
+
+  <!-- Architectural Background Grid Lines -->
+  <g stroke="#01509D" stroke-opacity="0.04" stroke-width="1">
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="160" y1="0" x2="160" y2="560"/>
+    <line x1="320" y1="0" x2="320" y2="560"/>
+    <line x1="480" y1="0" x2="480" y2="560"/>
+    <line x1="640" y1="0" x2="640" y2="560"/>
+  </g>
+
+  <!-- Distant Skyline Silhouette -->
+  <path d="M40 440 L40 320 L75 320 L75 300 L95 300 L95 350 L130 350 L130 280 L160 280 L160 360 L200 360 L200 440 Z" fill="#CBD5E1" opacity="0.45"/>
+  <path d="M620 440 L620 330 L650 330 L650 290 L680 290 L680 340 L720 340 L720 270 L750 270 L750 440 Z" fill="#CBD5E1" opacity="0.45"/>
+
+  <!-- Plaza / Ground Base -->
+  <path d="M0 420 L800 420 L800 560 L0 560 Z" fill="url(#groundGrad)"/>
+  <polygon points="120,420 680,420 740,560 60,560" fill="url(#plazaGrad)"/>
+
+  <!-- Pavement Perspective Lines -->
+  <g stroke="#94A3B8" stroke-width="1" opacity="0.35">
+    <line x1="400" y1="420" x2="400" y2="560"/>
+    <line x1="340" y1="420" x2="260" y2="560"/>
+    <line x1="460" y1="420" x2="540" y2="560"/>
+    <line x1="280" y1="420" x2="140" y2="560"/>
+    <line x1="520" y1="420" x2="660" y2="560"/>
+    <line x1="0" y1="450" x2="800" y2="450"/>
+    <line x1="0" y1="490" x2="800" y2="490"/>
+    <line x1="0" y1="535" x2="800" y2="535"/>
+  </g>
+
+  <!-- Secondary Office Wing (Left) -->
+  <g filter="url(#softShadow)">
+    <rect x="150" y="210" width="160" height="210" rx="3" fill="url(#towerLeft)"/>
+    <rect x="150" y="210" width="160" height="210" fill="url(#gridWindows)"/>
+    <!-- Roof feature -->
+    <rect x="165" y="198" width="130" height="12" fill="#0C2135" rx="2"/>
+  </g>
+
+  <!-- Secondary Office Wing (Right) -->
+  <g filter="url(#softShadow)">
+    <rect x="490" y="180" width="170" height="240" rx="3" fill="url(#towerRight)"/>
+    <rect x="490" y="180" width="170" height="240" fill="url(#gridWindows)"/>
+    <!-- Roof plant room -->
+    <rect x="520" y="165" width="110" height="15" fill="#0A192A" rx="2"/>
+    <!-- Communication mast -->
+    <line x1="575" y1="165" x2="575" y2="125" stroke="#64748B" stroke-width="2.5"/>
+    <circle cx="575" cy="123" r="3.5" fill="#01509D"/>
+  </g>
+
+  <!-- Main Center Tower / Campus Complex -->
+  <g filter="url(#softShadow)">
+    <!-- Main glass tower body -->
+    <rect x="250" y="90" width="300" height="330" rx="4" fill="url(#glassFacade)"/>
+
+    <!-- Glass facade pattern -->
+    <rect x="250" y="90" width="300" height="330" fill="url(#gridWindows)"/>
+
+    <!-- Sleek Diagonal Glass Reflection Band -->
+    <polygon points="250,90 390,90 280,420 250,420" fill="url(#glassReflection)"/>
+    <polygon points="410,90 480,90 350,420 280,420" fill="url(#glassReflection)" opacity="0.6"/>
+
+    <!-- Architectural Crown / Parapet -->
+    <rect x="238" y="74" width="324" height="16" fill="#03203E" rx="3"/>
+    <line x1="240" y1="82" x2="560" y2="82" stroke="#38BDF8" stroke-width="1.5" opacity="0.5"/>
+
+    <!-- Architectural Spire -->
+    <line x1="400" y1="74" x2="400" y2="28" stroke="#003D78" stroke-width="3"/>
+    <circle cx="400" cy="26" r="4.5" fill="#38BDF8"/>
+
+    <!-- Glass Atrium / Entrance Canopy -->
+    <polygon points="290,360 510,360 535,420 265,420" fill="#0A223B" opacity="0.95"/>
+    <polygon points="290,360 510,360 520,380 280,380" fill="#38BDF8" opacity="0.35"/>
+    <!-- Entrance Doors -->
+    <rect x="365" y="380" width="70" height="40" fill="#E0F2FE" rx="2"/>
+    <line x1="400" y1="380" x2="400" y2="420" stroke="#01509D" stroke-width="1.5"/>
+    <!-- Canopy Lighting Glow -->
+    <ellipse cx="400" cy="418" rx="60" ry="8" fill="#FDE047" opacity="0.35"/>
+  </g>
+
+  <!-- Landscaping & Greenery -->
+  <g>
+    <!-- Left Tree cluster -->
+    <circle cx="110" cy="425" r="28" fill="#15803D" opacity="0.85"/>
+    <circle cx="135" cy="415" r="34" fill="#16A34A" opacity="0.9"/>
+    <circle cx="160" cy="430" r="26" fill="#15803D" opacity="0.85"/>
+    <rect x="132" y="440" width="7" height="20" fill="#78350F" rx="2"/>
+
+    <!-- Right Tree cluster -->
+    <circle cx="650" cy="428" r="26" fill="#15803D" opacity="0.85"/>
+    <circle cx="678" cy="418" r="32" fill="#16A34A" opacity="0.9"/>
+    <circle cx="705" cy="430" r="24" fill="#15803D" opacity="0.85"/>
+    <rect x="675" y="440" width="7" height="20" fill="#78350F" rx="2"/>
+
+    <!-- Modern Planters / Low Hedges -->
+    <rect x="200" y="442" width="75" height="14" rx="4" fill="#CBD5E1" stroke="#94A3B8" stroke-width="1"/>
+    <rect x="203" y="438" width="69" height="8" rx="4" fill="#16A34A"/>
+    <rect x="525" y="442" width="75" height="14" rx="4" fill="#CBD5E1" stroke="#94A3B8" stroke-width="1"/>
+    <rect x="528" y="438" width="69" height="8" rx="4" fill="#16A34A"/>
+  </g>
+
+  <!-- Stylized People Walking (Scale) -->
+  <g fill="#475569" opacity="0.75">
+    <circle cx="360" cy="460" r="3"/>
+    <path d="M358 464 L362 464 L364 476 L361 476 L361 484 L359 484 L359 476 L356 476 Z"/>
+    
+    <circle cx="430" cy="470" r="3.2"/>
+    <path d="M428 474 L432 474 L435 487 L432 487 L431 497 L429 497 L428 487 L425 487 Z"/>
+  </g>
+
+  <!-- Watermark / Technical Badge Overlay -->
+  <g transform="translate(30, 30)">
+    <rect width="180" height="34" rx="6" fill="#FFFFFF" fill-opacity="0.92" stroke="#CBD5E1" stroke-width="1"/>
+    <circle cx="18" cy="17" r="4.5" fill="#01509D"/>
+    <text x="32" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#0F172A" letter-spacing="0.4">OPERATIONS HUB</text>
+  </g>
+  
+  <g transform="translate(620, 30)">
+    <rect width="150" height="34" rx="6" fill="#01509D" fill-opacity="0.9" stroke="#38BDF8" stroke-width="1" stroke-opacity="0.4"/>
+    <text x="75" y="21" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" letter-spacing="0.6">CAMPUS VISUAL</text>
+  </g>
+</svg>

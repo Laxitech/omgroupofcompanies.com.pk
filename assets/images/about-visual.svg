@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 640" role="img" aria-labelledby="aboutArtTitle aboutArtDesc">
+  <title id="aboutArtTitle">Sunlit stone archway</title>
+  <desc id="aboutArtDesc">A modern stone arch framing warm light, drawn in sand, navy and gold tones.</desc>
+  <defs>
+    <linearGradient id="sandBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6efe3"/>
+      <stop offset=".6" stop-color="#eee2cf"/>
+      <stop offset="1" stop-color="#e3d2b8"/>
+    </linearGradient>
+    <linearGradient id="frame" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1d425e"/>
+      <stop offset=".7" stop-color="#102c44"/>
+      <stop offset="1" stop-color="#0a1c2d"/>
+    </linearGradient>
+    <linearGradient id="opening" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8e9cc"/>
+      <stop offset=".52" stop-color="#e8c995"/>
+      <stop offset="1" stop-color="#cca367"/>
+    </linearGradient>
+    <radialGradient id="innerSun" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#fff6df" stop-opacity=".95"/>
+      <stop offset=".55" stop-color="#f4d59a" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#e4b975" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="floorLight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b98e52" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#b98e52" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="fineGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#0c2135" stroke-opacity=".045"/>
+    </pattern>
+    <pattern id="frameLines" width="26" height="26" patternUnits="userSpaceOnUse">
+      <path d="M26 0H0V26" fill="none" stroke="#f5f1ea" stroke-opacity=".035"/>
+    </pattern>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="aboutGrain">
+      <feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".28"/></feComponentTransfer>
+    </filter>
+  </defs>
+
+  <rect width="720" height="640" fill="url(#sandBg)"/>
+  <rect width="720" height="640" fill="url(#fineGrid)"/>
+  <circle cx="566" cy="142" r="176" fill="#e9c78d" opacity=".3"/>
+
+  <!-- Cast shadow -->
+  <path d="M168 574 350 640H720v-26L420 574Z" fill="#5f4a2f" opacity=".18" filter="url(#softShadow)"/>
+  <ellipse cx="384" cy="612" rx="292" ry="24" fill="#6b5437" opacity=".18" filter="url(#softShadow)"/>
+
+  <!-- Outer stone frame -->
+  <path d="M106 610V322a254 254 0 0 1 508 0v288Z" fill="url(#frame)"/>
+  <path d="M106 610V322a254 254 0 0 1 508 0v288" fill="none" stroke="#f3d49a" stroke-opacity=".35"/>
+  <rect x="106" y="240" width="508" height="370" fill="url(#frameLines)" opacity=".75"/>
+
+  <!-- Opening -->
+  <path d="M188 610V360a172 172 0 0 1 344 0v250Z" fill="url(#opening)"/>
+  <circle cx="360" cy="300" r="150" fill="url(#innerSun)"/>
+  <circle cx="360" cy="300" r="88" fill="#fff4d9" opacity=".55"/>
+  <path d="M188 498h344" stroke="#a6793f" stroke-opacity=".22"/>
+  <rect x="188" y="498" width="344" height="112" fill="url(#floorLight)"/>
+  <path d="M188 610V360a172 172 0 0 1 344 0v250" fill="none" stroke="#f9e7c6" stroke-opacity=".7" stroke-width="2"/>
+  <path d="M224 610V370a136 136 0 0 1 272 0v240" fill="none" stroke="#0c2135" stroke-opacity=".12"/>
+
+  <!-- Stone joints -->
+  <g stroke="#f5f1ea" stroke-opacity=".09">
+    <path d="M150 610V318"/>
+    <path d="M202 610V286"/>
+    <path d="M256 610V266"/>
+    <path d="M318 610V252"/>
+    <path d="M402 610V252"/>
+    <path d="M464 610V266"/>
+    <path d="M518 610V286"/>
+    <path d="M570 610V318"/>
+  </g>
+
+  <!-- Light spill -->
+  <path d="M256 610 190 640h376l-62-30Z" fill="#f6dfb4" opacity=".45"/>
+  <path d="M106 610h508" stroke="#f3d49a" stroke-opacity=".5"/>
+  <rect x="106" y="610" width="508" height="4" fill="#0a1c2d" opacity=".35"/>
+
+  <!-- Foreground details -->
+  <path d="M0 610h106v30H0ZM614 610h106v30H614Z" fill="#cbb794" opacity=".55"/>
+  <g fill="#0c2135" opacity=".3">
+    <rect x="56" y="474" width="3" height="136"/>
+    <rect x="68" y="504" width="2" height="106"/>
+    <rect x="650" y="458" width="3" height="152"/>
+    <rect x="662" y="492" width="2" height="118"/>
+  </g>
+  <circle cx="78" cy="448" r="34" fill="#6f7f63" opacity=".22"/>
+  <circle cx="666" cy="432" r="46" fill="#6f7f63" opacity=".18"/>
+
+  <rect width="720" height="640" filter="url(#aboutGrain)" opacity=".2" style="mix-blend-mode:multiply"/>
+</svg>

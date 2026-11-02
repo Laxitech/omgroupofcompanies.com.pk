@@ -1,0 +1,343 @@
+/* ==========================================================================
+   Company Details Page
+   Simple, unique, executive corporate showcase for OM Group portfolio companies.
+   ========================================================================== */
+
+.entity-showcase-section {
+  position: relative;
+  background: var(--color-background);
+  padding-block: clamp(3.5rem, 7vw, 6rem);
+}
+
+.entity-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+  align-items: start;
+}
+
+/* --- Left Column: Executive Brand Card --- */
+.entity-sidebar {
+  position: sticky;
+  top: calc(var(--header-height) + 2rem);
+}
+
+.entity-card {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.entity-card:hover {
+  box-shadow: 0 12px 32px -8px rgba(1, 80, 157, 0.12);
+}
+
+.entity-card__media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 2rem;
+  background: linear-gradient(180deg, #f8fbfd 0%, #f1f6fa 100%);
+  border-bottom: 1px solid var(--color-border);
+  min-height: 200px;
+}
+
+.entity-card__logo {
+  max-height: 90px;
+  max-width: 240px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform var(--transition);
+}
+
+.entity-card:hover .entity-card__logo {
+  transform: scale(1.03);
+}
+
+.entity-card__body {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.entity-sector-badge {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  padding: 0.35rem 0.8rem;
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: var(--radius-pill);
+}
+
+.entity-meta-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--color-line);
+  padding-top: 1.25rem;
+}
+
+.entity-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.entity-meta-item__label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.entity-meta-item__value {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.entity-meta-item__value svg {
+  width: 1rem;
+  height: 1rem;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.entity-card__cta {
+  margin-top: 0.5rem;
+}
+
+/* --- Right Column: Narrative & Capabilities --- */
+.entity-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.entity-main__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.entity-tagline {
+  margin: 0;
+  font-size: clamp(1.8rem, 2.8vw, 2.35rem);
+  line-height: 1.2;
+  color: var(--color-ink);
+  letter-spacing: -0.02em;
+}
+
+.entity-narrative {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.entity-lead {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.72;
+  color: var(--color-ink);
+  font-weight: 400;
+}
+
+.entity-narrative p:not(.entity-lead) {
+  margin: 0;
+  color: var(--color-ink-muted);
+  font-size: 0.95rem;
+  line-height: 1.68;
+}
+
+/* --- Capabilities List --- */
+.entity-capabilities-block {
+  margin-top: 1rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.entity-capabilities-title {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.2rem;
+  color: var(--color-ink);
+}
+
+.entity-capabilities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.entity-capability-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.entity-capability-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.entity-capability-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.entity-capability-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.entity-capability-body h4 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--color-ink);
+  line-height: 1.35;
+}
+
+.entity-capability-body p {
+  margin: 0;
+  color: var(--color-ink-muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+/* --- Other Portfolio Companies Navigation --- */
+.portfolio-directory-section {
+  position: relative;
+  background: var(--color-background-soft);
+  padding-block: clamp(3.5rem, 7vw, 6rem);
+}
+
+.portfolio-directory-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+
+.portfolio-directory-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.35rem 1.5rem;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.portfolio-directory-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px -6px rgba(1, 80, 157, 0.12);
+  border-color: rgba(1, 80, 157, 0.35);
+}
+
+.portfolio-directory-card__thumb {
+  width: 60px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fbfd;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.35rem;
+  flex-shrink: 0;
+}
+
+.portfolio-directory-card__thumb img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.portfolio-directory-card__content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.portfolio-directory-card__title {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.portfolio-directory-card__sector {
+  font-size: 0.74rem;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.portfolio-directory-card__arrow {
+  color: var(--color-primary);
+  flex-shrink: 0;
+  transition: transform var(--transition);
+}
+
+.portfolio-directory-card:hover .portfolio-directory-card__arrow {
+  transform: translateX(4px);
+}
+
+/* Responsive ------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .entity-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .entity-sidebar {
+    position: static;
+    max-width: 520px;
+  }
+
+  .portfolio-directory-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .portfolio-directory-grid {
+    grid-template-columns: 1fr;
+  }
+}
